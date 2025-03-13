@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grzegorz K</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Raleway:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <nav>
+        <div class="menu">
+          <p id="languageBtn">PL</p>
+          <div class="darkmodeContainer">
+            <div class="darkmode">
+              <div class="darkball"></div>
+            </div>
+          </div>
+          <a href="#about" id="menuAbout">O Mnie</a>
+          <a href="#skills" id="menuSkills">Umiejętności</a>
+          <a href="#contact" id="menuContact">Kontakt</a>
+          <p class="js" id="menuProjects">Projekty</p>
+          <div class="js-menu">
+            <a href="#" id="project1">Projekt1</a>
+          </div>
+        </div>
+      </nav>
+      <header id="skills">
+        <h1 class="skilltitle">Moje umiejętności</h1>
+        <div class="skills">
+          <div class="skill elem1">
+            <h1>Html</h1>
+            <img src="galeria/HTML.png" alt="" />
+          </div>
+          <div class="skill elem2">
+            <h1>css</h1>
+            <img src="galeria/CSS.png" alt="" />
+          </div>
+          <div class="skill elem3">
+            <h1>JavaScript</h1>
+            <img src="galeria/JS.png" alt="" />
+          </div>
+          <div class="skill elem4">
+            <h1>REACT</h1>
+            <img src="galeria/REACT.png" alt="" />
+            <div class="locked">
+              <h2 id="notUnlocked">Jeszcze nie odblokowano</h2>
+              <img src="galeria/PADLOCK.png" alt="kłódka" />
+            </div>
+          </div>
+          <div class="skill elem5">
+            <h1>NODE</h1>
+            <img src="galeria/NODE.png" alt="" />
+            <div class="locked">
+              <h2 id="notUnlocked">Jeszcze nie odblokowano</h2>
+              <img src="galeria/PADLOCK.png" alt="kłódka" />
+            </div>
+          </div>
+          <div class="skill elem6">
+            <h1>MONGODB</h1>
+            <img src="galeria/MONGO.png" alt="" />
+            <div class="locked">
+              <h2 id="notUnlocked">Jeszcze nie odblokowano</h2>
+              <img src="galeria/PADLOCK.png" alt="kłódka" />
+            </div>
+          </div>
+        </div>
+      </header>
+      <main id="about">
+        <div class="bgcimg">
+          <div class="aboutcontainer">
+            <div class="whitebgc"></div>
+            <img src="galeria/ja.png" alt="moje zdjecie" class="face" />
+            <div class="abouttext">
+              <h1>Grzegorz Kopański</h1>
+              <p id="aboutDescription">
+                Cześć! Jestem Grzegorz, pasjonat frontendu i przyszły król
+                kodowania. Uwielbiam rozkminiać, jak działa kod i znajdować
+                kreatywne rozwiązania. Moja przygoda z programowaniem zaczęła
+                się od czystego HTML i CSS, ale teraz coraz bardziej wkręcam się
+                w JavaScript i interaktywne efekty. Jak coś mnie zaciekawi, to
+                muszę to rozgryźć do końca. Nie lubię półśrodków – jak coś
+                robię, to na pełnej! 💥 Koduję, gram w Teamfight Tactics, a w
+                wolnym czasie szukam sposobów, jak zdobyć gruby hajs. 😎 ✨ Cel?
+                Być tak dobrym, żeby moje projekty mówiły same za siebie.
+              </p>
+            </div>
+          </div>
+        </div>
+      </main>
+      <section id="contact" class="contactbox">
+        <div class="contactbuttons">
+          <p class="contactbutton1"><i class="fas fa-envelope"></i>EMAIL</p>
+          <p class="buttonAddon1 displayNone">grzes4407@wp.pl</p>
+          <p class="contactbutton2"><i class="fas fa-phone-alt"></i>TELEFON</p>
+          <p class="buttonAddon2 displayNone">732 997 597</p>
+          <p class="contactbutton3"><i class="fab fa-discord"></i>DISCORD</p>
+          <p class="buttonAddon3 displayNone">anubek.</p>
+        </div>
+        <div class="contactsender">
+          <h1 id="contactTitle">Formularz Kontaktowy</h1>
+          <div>
+            <label for="imie" id="contactName">Imię</label>
+            <input type="text" name="imie" id="imie" />
+          </div>
+          <div>
+            <label for="mail" id="contactMail">Mail</label>
+            <input type="email" name="mail" id="mail" />
+          </div>
+          <div>
+            <label for="tresc" id="contactContent">Treść</label>
+            <textarea name="tresc" id="tresc" rows="5"></textarea>
+          </div>
+          <div>
+            <input type="button" value="WYŚLIJ" id="btn1" />
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

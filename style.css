@@ -1,0 +1,1220 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+body {
+  background: linear-gradient(135deg, #ececec, #dcdcdc);
+  overflow-x: hidden;
+}
+nav {
+  top: 0;
+  position: fixed;
+  white-space: nowrap;
+  width: 100%;
+  height: 40px;
+  background-color: rgb(19, 18, 18);
+  z-index: 15;
+}
+.menu {
+  width: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  z-index: 3;
+}
+.menu a,
+.menu p {
+  text-decoration: none;
+  color: aliceblue;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  padding: 0 30px;
+  line-height: 35px;
+  transition: 0.5s;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+.menu a:hover,
+.menu p:hover {
+  color: red;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.darkmodeContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.darkmode {
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  width: 60px;
+  height: 25px;
+  background-color: white;
+  transition: 1s;
+  cursor: pointer;
+}
+.lightmodestrip {
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  width: 60px;
+  height: 25px;
+  background-color: rgb(59, 57, 57);
+  transition: 1s;
+}
+.darkball {
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 100%;
+  width: 15px;
+  height: 15px;
+  background-color: black;
+  transition: 1s;
+}
+.lightmode {
+  margin-left: 40px;
+  margin-right: 5px;
+  border-radius: 100%;
+  width: 15px;
+  height: 15px;
+  background-color: rgb(228, 224, 224);
+  transition: 1s;
+}
+
+.js-menu {
+  position: absolute;
+  top: 40px;
+  width: 100%;
+  height: 200px;
+  background-color: black;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 0;
+  transition: 0.2s;
+}
+
+.visible {
+  opacity: 100%;
+  visibility: visible;
+}
+header {
+  height: 100%;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  transition: 0.5s;
+}
+.headerDark {
+  background-color: #202022;
+}
+.skills {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 50px;
+}
+.skill {
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  width: 300px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(207, 207, 207);
+  border-radius: 30px;
+  transition: 0.5s;
+  overflow: hidden;
+}
+.skillDark {
+  background-color: #555558;
+}
+.skill h1 {
+  width: 100%;
+  padding-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: aliceblue;
+  text-shadow: 2px 2px 3px black;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 2.5em;
+}
+.skill img {
+  margin: 0 auto;
+  width: 200px;
+  height: auto;
+}
+.elem1 {
+  border-top: rgb(255, 115, 0) solid 16px;
+}
+.elem2 {
+  border-top: 16px solid rgb(67, 78, 231);
+}
+.elem3 {
+  border-top: 16px solid rgb(247, 202, 54);
+}
+.elem4 {
+  border-top: 16px solid rgb(166, 87, 255);
+}
+.elem5 {
+  border-top: 16px solid rgb(160, 212, 75);
+}
+.elem6 {
+  border-top: 16px solid rgb(114, 103, 93);
+}
+.skill:hover {
+  transform: translateY(-10px);
+}
+.skilltitle {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "montserrat";
+  font-size: 3em;
+  padding: 30px;
+  padding-bottom: 60px;
+  text-shadow: 1px 1px 2px rgb(148, 147, 147);
+  color: rgb(0, 0, 0);
+  transition: 0.5s;
+}
+.skilltitleDark {
+  color: white;
+}
+.locked {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  text-transform: uppercase;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+.locked img {
+  position: relative;
+  bottom: 30px;
+}
+.locked h2 {
+  position: absolute;
+  display: block;
+  text-align: center;
+  z-index: 2;
+}
+.bgcimg {
+  width: 100%;
+  height: 1080px;
+  background: url(galeria/animebc.jpg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+.aboutcontainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 30px;
+}
+.whitebgc {
+  position: absolute;
+  width: 95%;
+  height: 95%;
+  background-color: white;
+  opacity: 10%;
+  border-radius: 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.face {
+  opacity: 95%;
+  border-radius: 50%;
+  width: 550px;
+  height: 550px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.abouttext {
+  display: flex;
+  flex-direction: column;
+}
+.bgcimg h1 {
+  text-align: center;
+  color: white;
+  font-size: 4em;
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 2px 2px 2px black;
+  word-wrap: break-word;
+}
+.bgcimg p {
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 2px 2px 2px black;
+  font-size: 2.5em;
+  color: white;
+  text-align: center;
+  max-width: 800px;
+  white-space: normal;
+  word-wrap: break-word;
+}
+.contactbox {
+  height: auto;
+  background-color: rgb(24, 0, 92);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 40px;
+}
+
+.contactbuttons {
+  border-radius: 20px;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  background-color: #01004e;
+  font-size: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  min-height: 70vh;
+}
+
+.contactbuttons i {
+  margin-right: 15px;
+  font-size: 1.5em;
+}
+.buttonAddon1,
+.buttonAddon2,
+.buttonAddon3 {
+  padding: 15px 30px;
+  border-radius: 10px;
+  background-color: rgb(49, 1, 160);
+  margin: 10px 0;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  top: -70px;
+  font-size: 0.5em;
+  z-index: 1;
+  transition: 0.2s;
+}
+.displayNone {
+  display: none;
+}
+.AddonVisible {
+  display: block;
+  top: 0;
+}
+
+.contactbutton1,
+.contactbutton2,
+.contactbutton3 {
+  cursor: pointer;
+  padding: 15px 30px;
+  border-radius: 10px;
+  background-color: rgb(49, 1, 160);
+  transition: all 0.3s;
+  margin: 10px 0;
+  text-align: center;
+  width: 100%;
+  z-index: 2;
+}
+
+.contactbuttons p:hover {
+  background-color: rgb(70, 1, 230);
+  transform: translateY(-5px);
+}
+
+.contactsender {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2em;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  background-color: #01004e;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  width: 40%;
+  min-height: 80vh;
+}
+
+.contactsender h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.contactsender div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.contactsender label {
+  margin-bottom: 10px;
+  font-size: 1em;
+}
+
+.contactsender input,
+.contactsender textarea {
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background-color: #471ac2;
+  width: 100%;
+  padding: 15px;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.contactsender input:focus,
+.contactsender textarea:focus {
+  border-color: #ffffff;
+  background-color: #5c2be2;
+}
+
+#btn1 {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  width: 50%;
+  padding: 15px;
+  background-color: #5c2be2;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1em;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#btn1:hover {
+  background-color: #471ac2;
+  transform: translateY(-3px);
+}
+@media (min-width: 1921px) and (max-width: 2560px) {
+  nav {
+    height: 50px;
+    position: fixed;
+  }
+  .menu a,
+  .menu p {
+    line-height: 50px;
+    font-size: 25px;
+  }
+  .menu {
+    height: 50px;
+    line-height: 50px;
+  }
+  .skill h1 {
+    font-size: 3em;
+  }
+  .skill img {
+    width: 300px;
+  }
+  .skilltitle {
+    font-size: 5em;
+  }
+  .skill {
+    width: 400px;
+    height: 600px;
+  }
+  .face {
+    width: 700px;
+    height: 700px;
+  }
+  .abouttext {
+    text-align: center;
+  }
+  .abouttext h1 {
+    font-size: 6em;
+  }
+  .abouttext p {
+    text-align: center;
+    font-size: 2.5em;
+    max-width: 1000px;
+  }
+  .contactbuttons {
+    font-size: 4em;
+  }
+  .contactsender h1 {
+    font-size: 3em;
+  }
+  .contactsender label {
+    font-size: 2em;
+  }
+  .contactsender input,
+  .contactsender textarea {
+    font-size: 1em;
+  }
+}
+@media (max-width: 1402px) {
+  header {
+    height: 100%;
+  }
+
+  .skills {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .skill {
+    width: 400px;
+    min-height: 400px;
+    margin-bottom: 20px;
+  }
+
+  .skill img {
+    margin: 0 auto;
+    width: 200px;
+    height: auto;
+  }
+  .aboutcontainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .whitebgc {
+    width: 95%;
+    min-height: 95%;
+  }
+  .face {
+    width: 400px;
+    height: 400px;
+  }
+  .abouttext
+  {
+    max-width: 100%;
+  }
+  .abouttext h1 {
+    font-size: 2.8em;
+    padding: 15px;
+  }
+  .abouttext p {
+    font-size: 2.3em;
+    padding: 15px;
+    max-width: 100%;
+  }
+}
+@media (max-width: 1281px) {
+  header {
+    height: 100%;
+  }
+
+  .skills {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .skill {
+    width: 400px;
+    min-height: 400px;
+    margin-bottom: 20px;
+  }
+
+  .skill img {
+    margin: 0 auto;
+    width: 200px;
+    height: auto;
+  }
+  .aboutcontainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .whitebgc {
+    width: 95%;
+    height: 95%;
+  }
+  .face {
+    width: 350px;
+    height: 350px;
+  }
+  .abouttext h1 {
+    font-size: 2.5em;
+    padding: 15px;
+  }
+  .abouttext p {
+    font-size: 2em;
+    padding: 15px;
+  }
+}
+@media (max-width: 1024px) {
+  nav {
+    padding: 0;
+  }
+  .menu a,
+  .menu p {
+    padding: 0 10px;
+    font-size: 1.3em;
+  }
+  header {
+    height: 100%;
+  }
+  .skills {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .skill {
+    width: 40%;
+    min-height: 400px;
+    margin-bottom: 20px;
+  }
+  .skilltitle {
+    font-size: 4em;
+  }
+  .skill h1 {
+    font-size: 3em;
+  }
+  .skill img {
+    width: 200px;
+  }
+  .bgcimg {
+    width: 100%;
+    height: 100%;
+  }
+  .aboutcontainer {
+    min-height: auto;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .whitebgc {
+    min-height: auto;
+    width: 95%;
+    height: 95%;
+  }
+  .face {
+    width: 250px;
+    height: 250px;
+  }
+  .abouttext h1 {
+    font-size: 2.5em;
+    padding: 15px;
+  }
+  .abouttext p {
+    font-size: 2em;
+    padding: 15px;
+  }
+
+  .contactbox {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .contactbuttons,
+  .contactsender {
+    width: 100%;
+    margin-bottom: 20px;
+    min-height: auto;
+  }
+
+  .contactsender {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 900px) {
+  nav {
+    padding: 0;
+  }
+  .menu a,
+  .menu p {
+    padding: 0 10px;
+    font-size: 1em;
+  }
+  header {
+    height: 100%;
+  }
+  .skills {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .skill {
+    width: 40%;
+    min-height: 250px;
+    margin-bottom: 20px;
+  }
+  .skilltitle {
+    font-size: 3em;
+  }
+  .skill h1 {
+    font-size: 2em;
+  }
+  .skill img {
+    width: 100px;
+  }
+  .bgcimg {
+    width: 100%;
+    height: 100%;
+  }
+  .aboutcontainer {
+    min-height: auto;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .whitebgc {
+    min-height: auto;
+    width: 95%;
+    height: 95%;
+  }
+  .face {
+    width: 250px;
+    height: 250px;
+  }
+  .abouttext h1 {
+    font-size: 2.5em;
+    padding: 15px;
+  }
+  .abouttext p {
+    font-size: 2em;
+    padding: 15px;
+  }
+
+  .contactbox {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .contactbuttons,
+  .contactsender {
+    width: 100%;
+    margin-bottom: 20px;
+    min-height: auto;
+  }
+
+  .contactsender {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    top: 0;
+    padding: 0;
+    padding: 0;
+  }
+  .menu a,
+  .menu p {
+    padding: 0 10px;
+    font-size: 0.9em;
+  }
+  .darkmode {
+    border-radius: 10px;
+    width: 40px;
+    height: 20px;
+    background-color: white;
+    transition: 1s;
+  }
+  .lightmodestrip {
+    border-radius: 10px;
+    width: 40px;
+    height: 20px;
+    background-color: rgb(59, 57, 57);
+    transition: 1s;
+  }
+  .darkball {
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 100%;
+    width: 15px;
+    height: 15px;
+    background-color: black;
+    transition: 0.5s;
+  }
+  .lightmode {
+    margin-left: 20px;
+    margin-right: 3px;
+    border-radius: 100%;
+    width: 15px;
+    height: 15px;
+    background-color: rgb(228, 224, 224);
+    transition: 0.5s;
+  }
+  header {
+    height: 100%;
+  }
+  .skills {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .skill {
+    width: 40%;
+    min-height: 250px;
+    margin-bottom: 20px;
+  }
+  .skilltitle {
+    font-size: 3em;
+  }
+  .skill h1 {
+    font-size: 2em;
+  }
+  .skill img {
+    width: 100px;
+  }
+  .locked {
+    font-size: 10px;
+  }
+  .bgcimg {
+    width: 100%;
+    height: 100%;
+  }
+  .aboutcontainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .whitebgc {
+    width: 95%;
+    height: 95%;
+  }
+  .face {
+    width: 200px;
+    height: 200px;
+    padding: 0;
+    margin: 0;
+  }
+  .abouttext h1 {
+    font-size: 2em;
+    padding: 0;
+    margin: 0;
+  }
+  .abouttext p {
+    font-size: 1em;
+    padding: 0;
+    margin: 0;
+  }
+
+  .contactbox {
+    flex-direction: column;
+    min-height: auto;
+    padding: 20px;
+  }
+
+  .contactbuttons,
+  .contactsender {
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 1.3em;
+    min-height: auto;
+  }
+
+  .contactsender {
+    min-height: auto;
+    font-size: 1em;
+  }
+}
+@media (max-width: 500px) {
+  body {
+    max-width: 100%;
+  }
+  nav {
+    top: 0;
+    padding: 0;
+    padding: 0;
+  }
+  .menu a,
+  .menu p {
+    padding: 0 10px;
+    font-size: 0.5em;
+  }
+  .darkmode {
+    border-radius: 10px;
+    width: 30px;
+    height: 15px;
+    background-color: white;
+    transition: 1s;
+  }
+  .lightmodestrip {
+    border-radius: 10px;
+    width: 30px;
+    height: 15px;
+    background-color: rgb(59, 57, 57);
+    transition: 1s;
+  }
+  .darkball {
+    margin-left: 3px;
+    margin-right: 5px;
+    border-radius: 100%;
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    transition: 0.5s;
+  }
+  .lightmode {
+    margin-left: 15px;
+    margin-right: 3px;
+    border-radius: 100%;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(228, 224, 224);
+    transition: 0.5s;
+  }
+  header {
+    height: 100%;
+  }
+  .skills {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .skill {
+    width: 45%;
+    min-height: 250px;
+    margin-bottom: 20px;
+  }
+  .skilltitle {
+    font-size: 2.5em;
+  }
+  .skill h1 {
+    font-size: 1.5em;
+  }
+  .skill img {
+    width: 100px;
+  }
+  .locked {
+    font-size: 10px;
+  }
+  .bgcimg {
+    width: 100%;
+    height: 100%;
+  }
+  .aboutcontainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .abouttext
+  {
+    justify-content: center;
+  }
+  .whitebgc {
+    width: 95%;
+    height: 95%;
+  }
+  .face {
+    width: 200px;
+    height: 200px;
+    padding: 0;
+    margin: 0;
+  }
+  .abouttext h1 {
+    font-size: 2em;
+    padding: 0;
+    margin: 0;
+  }
+  .abouttext p {
+    font-size: 1em;
+    padding: 0;
+    margin: 0;
+  }
+
+  .contactbox {
+    flex-direction: column;
+    min-height: auto;
+    padding: 20px;
+  }
+
+  .contactbuttons,
+  .contactsender {
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    min-height: auto;
+  }
+
+  .contactsender {
+    min-height: auto;
+    font-size: 1em;
+  }
+}
+@media (max-width: 400px) {
+  nav {
+    top: 0;
+    padding: 0;
+    padding: 0;
+  }
+  .menu a,
+  .menu p {
+    padding: 0 10px;
+    font-size: 0.5em;
+  }
+  .darkmode {
+    border-radius: 10px;
+    width: 30px;
+    height: 15px;
+    background-color: white;
+    transition: 1s;
+  }
+  .lightmodestrip {
+    border-radius: 10px;
+    width: 30px;
+    height: 15px;
+    background-color: rgb(59, 57, 57);
+    transition: 1s;
+  }
+  .darkball {
+    margin-left: 3px;
+    margin-right: 5px;
+    border-radius: 100%;
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    transition: 0.5s;
+  }
+  .lightmode {
+    margin-left: 15px;
+    margin-right: 3px;
+    border-radius: 100%;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(228, 224, 224);
+    transition: 0.5s;
+  }
+  header {
+    height: 100%;
+  }
+  .skills {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .skill {
+    width: 40%;
+    min-height: 220px;
+    margin-bottom: 20px;
+  }
+  .skilltitle {
+    font-size: 1.5em;
+  }
+  .skill h1 {
+    font-size: 1em;
+  }
+  .skill img {
+    width: 100px;
+  }
+  .locked {
+    font-size: 10px;
+  }
+  .bgcimg {
+    width: 100%;
+    height: 100%;
+  }
+  .aboutcontainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .whitebgc {
+    width: 95%;
+    height: 95%;
+  }
+  .face {
+    width: 200px;
+    height: 200px;
+    padding: 0;
+    margin: 0;
+  }
+  .abouttext h1 {
+    font-size: 2em;
+    padding: 0;
+    margin: 0;
+  }
+  .abouttext p {
+    font-size: 1em;
+    padding: 0;
+    margin: 0;
+  }
+
+  .contactbox {
+    flex-direction: column;
+    min-height: auto;
+    padding: 20px;
+  }
+
+  .contactbuttons,
+  .contactsender {
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 1.3em;
+    min-height: auto;
+  }
+
+  .contactsender {
+    min-height: auto;
+    font-size: 1em;
+  }
+}
+@media (max-width: 360px) {
+  nav {
+    top: 0;
+    padding: 0;
+  }
+  .menu a,
+  .menu p {
+    padding: 0 10px;
+    font-size: 0.4em;
+  }
+  .darkmode {
+    border-radius: 10px;
+    width: 30px;
+    height: 15px;
+    background-color: white;
+    transition: 1s;
+  }
+  .lightmodestrip {
+    border-radius: 10px;
+    width: 30px;
+    height: 15px;
+    background-color: rgb(59, 57, 57);
+    transition: 1s;
+  }
+  .darkball {
+    margin-left: 3px;
+    margin-right: 5px;
+    border-radius: 100%;
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    transition: 0.5s;
+  }
+  .lightmode {
+    margin-left: 15px;
+    margin-right: 3px;
+    border-radius: 100%;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(228, 224, 224);
+    transition: 0.5s;
+  }
+  header {
+    height: 100%;
+  }
+  .skills {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .skill {
+    width: 40%;
+    min-height: 220px;
+    margin-bottom: 20px;
+  }
+  .skilltitle {
+    font-size: 1.5em;
+  }
+  .skill h1 {
+    font-size: 1em;
+  }
+  .skill img {
+    width: 100px;
+  }
+  .locked {
+    font-size: 10px;
+  }
+  .bgcimg {
+    width: 100%;
+    height: 100%;
+  }
+  .aboutcontainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .whitebgc {
+    width: 95%;
+    height: 95%;
+  }
+  .face {
+    width: 200px;
+    height: 200px;
+    padding: 0;
+    margin: 0;
+  }
+  .abouttext h1 {
+    font-size: 2em;
+    padding: 0;
+    margin: 0;
+  }
+  .abouttext p {
+    font-size: 1em;
+    padding: 0;
+    margin: 0;
+  }
+
+  .contactbox {
+    flex-direction: column;
+    min-height: auto;
+    padding: 20px;
+  }
+
+  .contactbuttons,
+  .contactsender {
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 1.3em;
+    min-height: auto;
+  }
+
+  .contactsender {
+    min-height: auto;
+    font-size: 1em;
+  }
+}
